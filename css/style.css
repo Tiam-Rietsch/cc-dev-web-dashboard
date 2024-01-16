@@ -201,13 +201,52 @@ main {
     gap: 1em;
 }
 
-#insights-board > .insight-card {
+.insight-card {
     height: 100%;
     width: 25%;
     border-radius: 5px;
     box-shadow: 0px 1px 5px 1px #5959591f;
     background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
 }
+
+.insight-card > .insight-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: flex-start;
+}
+
+.insight-card > .insight-info > p.insight-title {
+    font-size: 0.8em;
+    color: #80808094;
+}
+
+.insight-card > .insight-info > p.insight-value {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: black
+}
+
+.insight-card > .insight-icon {
+    height: 80%;
+    aspect-ratio: 1/1;
+    background-color: #23d3d31e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.insight-card > .insight-icon > img {
+    height: inherit;
+    width: inherit;
+}
+
+
 
 #stats-board {
     width: 100%;
