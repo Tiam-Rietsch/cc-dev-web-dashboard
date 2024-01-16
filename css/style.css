@@ -139,6 +139,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* ------------ nouveau code */
+    transition: 0.3s ease;
 }
 
 #language-links > li:hover {
