@@ -146,3 +146,33 @@ header {
 #language-links > li:hover {
     background-color: #18c460;
 }
+
+
+/* ------------------------------------ MAIN ------------------------------------ */
+main {
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* par defaut le side bar n'est pas visible */
+#sidebar {
+    width: 20%;
+    min-width: 250px;
+    background-color: yellow;
+    height: 100%;
+    display: none;
+}
+
+/* il sera visible seulement si on ajout la class visible-side */
+#sidebar.visible-side {
+    display: flex;
+}
+
+#dashboard {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+}
