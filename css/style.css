@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+header {
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: 1px solid gray;
+}
+
+#primary-nav {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 2em;
+    height: 70%;
+    padding: 0 1em;
+}
+
+#nav-logo {
+    margin-right: 3em;
+    width: 10%;
+}
+
+#nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    gap: 1em;
+    width: 40%;
+}
+
+#tool-block {
+    width: 30%;
+}
+
+#account-block {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+    width: 20%;
+}
+
+#secondary-nav {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    gap: 1em;
+    height: 30%;
+    background-color: black;
+    color: white;
+    padding: 0 1em;
+    font-size: 0.7em;
+}
+
+#language-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+}
+
+#language-links > li {
+    height: 100%;
+    padding: 0 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#language-links > li:hover {
+    background-color: rgb(24, 196, 96);
+}
