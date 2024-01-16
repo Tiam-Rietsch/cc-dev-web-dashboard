@@ -171,8 +171,58 @@ main {
     display: flex;
 }
 
+/* ------------------ nouveau code ici ------------------- */
 #dashboard {
     width: 100%;
     height: 100%;
-    background-color: red;
+    background-color: #f4f4f4;
+    /* nouveau code */
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    gap: 1em;
 }
+
+#dashboard-header {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#insights-board {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+
+#insights-board > .insight-card {
+    height: 100%;
+    width: 25%;
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px 1px #5959591f;
+    background-color: white;
+}
+
+#stats-board {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1em;
+}
+
+#stats-board > .stat-card {
+    height: 100%;
+    width: 50%;
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px 1px #5959591f;
+    background-color: white;
+}
+
