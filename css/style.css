@@ -1,4 +1,4 @@
-/* enleve tous les marges indesirables (par defaut) */
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -11,10 +11,9 @@ h1, h2, h3, p {
     padding: 0;
 }
 
-/* enleve la decorations sur les a */
 a {
     text-decoration: none;
-    color: inherit; /* fait en sorte qu'il herite de la couleur du parent*/
+    color: inherit;
 }
 
 
@@ -37,10 +36,21 @@ header {
     padding: 0 1em;
 }
 
+/* ----------------------------------------------- modification ici */
 #nav-logo {
     margin-right: 3em;
     width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
 }
+
+#nav-logo > img {
+    height: 70%;
+    aspect-ratio: 1/1;
+}
+/* ------------------------------------------------- fin modif */
 
 #nav-links {
     display: flex;
@@ -51,7 +61,7 @@ header {
     width: 40%;
 }
 
-/* ----------- nouveau code 3 */
+
 #nav-links > li > a {
     font-weight: bold;
     transition: 0.3s ease;
@@ -60,9 +70,8 @@ header {
 #nav-links > li:hover > a {
     color: #18c460;
 }
-/* fin nouveau code 3 */
 
-/* --------------- nouveau code */
+
 #tool-block {
     width: 20%;
     height: 50%;
@@ -82,13 +91,9 @@ header {
 #tool-block > #search-btn {
     width: 15%;
     height: 100%;
-    /* background-color: transparent; */
     border-radius: 0 100px 100px 0;
     border: none;
 }
-
-/* -------- fin nouveau */
-
 
 #account-block {
     display: flex;
@@ -110,7 +115,7 @@ header {
     padding: 0 1em 0 0;
     font-size: 0.7em;
 }
-/* ---------------------------- nouveau 2 (regarder html) */
+
 #secondary-nav > button {
     background-color: black;
     color: white;
@@ -123,7 +128,7 @@ header {
 #secondary-nav > button:hover {
     background-color: #18c460;
 }
-/* fin nouveau code 2 */
+
 
 #language-links {
     display: flex;
@@ -158,21 +163,99 @@ main {
     background-color: #f4f4f4;
 }
 
-/* par defaut le side bar n'est pas visible */
+/* -------------------- Modification ici */
 #sidebar {
-    background-color: yellow;
+    background-color: white;
     height: 100%;
+    display: none;
+    z-index: 100;
+    overflow-y: scroll;
+}
+
+
+#sidebar.visible-side {
+    width: 20%;
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1em;
+    align-items: flex-start;
+    box-shadow: 1px 0px 5px 1px #5d5d5d43;
+}
+
+#sidebar-header {
+    padding: 0.5em 0 0 2em;
+    color: rgb(154, 153, 153);
+    font-weight: 100;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sidebar-header > h3 {
+    font-weight: 400;
+}
+
+#sidebar-content {
+    width: 100%;
+    height: fit-content;
+}
+
+.content-group {
+    width: 100%;
+}
+
+.content-group button {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.7em 1em 0.7em 2em;
+    background-color: white;
+    border: none;
+    font-weight: 500;
+}
+
+.content-group button:hover {
+    background-color: rgba(190, 237, 220, 0.527);
+}
+
+.content-group.group-opened > .content-head {
+    position: relative;
+    color: #14af6e;
+}
+.content-group.group-opened > .content-head::before {
+    content: "";
+    height: 100%;
+    width: 7px;
+    background-color: #14af6e;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0 5px 5px 0;
+}
+
+.content-head > span {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.content-item {
+    padding-left: 4em !important;
+    transition: 1s ease;
+}
+
+.content-item.closed-item {
     display: none;
 }
 
-/* il sera visible seulement si on ajout la class visible-side */
-#sidebar.visible-side {
-    width: 20%;
-    min-width: 250px;
-    display: flex;
-}
+/* --------------------------------- fin modification */
 
-/* ------------------ nouveau code ici ------------------- */
 #dashboard {
     width: 80%;
     height: 100%;
@@ -213,10 +296,10 @@ main {
     padding: 1em 2em;
 }
 
-.insight-card > .insight-icon {
+.insight-card > .insight-info {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 0.5em;
     align-items: flex-start;
 }
 
